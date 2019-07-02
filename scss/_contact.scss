@@ -1,0 +1,81 @@
+.contact{
+    padding: 150px 0;
+    background-color: $sec-color;
+    &-title{
+        margin-bottom: 68px;
+        @include lg-one(margin-bottom, 38px);
+    }
+    .col-md-10{
+        margin: 0 auto;
+        @include lg-one(margin, 30px auto);
+    }
+    &-address{
+        background: $white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        padding: 99px 125px 97px 90px;
+        @include sm-one(padding, 60px 40px);
+        color: $text;
+        h6{
+            color: $orange;
+            text-transform: uppercase;
+            font-size: 24px !important;
+            font-family: 'Source Sans Pro-sb';
+            margin-bottom: 28px;
+        }
+        p{
+            font-size: 18px;
+            margin-bottom: 70px;
+            font-family: 'Source Sans Pro-reg';
+            
+        }
+        a{
+            color: $text;
+        }
+        ul{
+            @extend p;
+            list-style: none;
+            line-height: 24px;
+        }
+    }
+    &-form{
+        background: $white;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        padding: 99px 125px 97px 90px;
+        font-family: 'Source Sans Pro-reg';
+        color: $text;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include sm{
+            align-items: center;
+            padding: 60px 40px;
+        }
+        input{
+            border: none;
+            border-bottom: 1px solid $text;
+            padding: 0 19px 19px 0;
+            background: $white;
+            width: 100%;
+            font-family: 'Source Sans Pro-reg';
+            @include lg-one(margin-bottom, 30px);
+        }
+        textarea{
+            @extend input;
+            resize: vertical;
+            height: 120px;
+            font-family: 'Source Sans Pro-reg';
+        }
+        button{
+            background: $orange;
+            padding: 17px 27px;
+            border-radius: 7px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $white;
+            font-family: 'Source Sans Pro-sb';
+            border: none;
+        }
+    }
+}

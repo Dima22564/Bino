@@ -1,0 +1,59 @@
+.team{
+    @include bg('../img/team-bg.jpg');
+    position: relative;
+    height: 745px;
+    &::before{
+        @include pseudo();
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(32, 32, 32, 0.75);
+    }
+    .graph{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 55;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object{
+            width: 100%;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+svg{
+    .img{
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+    }
+}
+
+.info-panel{
+    position: absolute;
+    z-index: 555;
+    h6{
+        color: $orange;
+        letter-spacing: 1.8px;
+        font-size: 24px;
+        font-family: 'Source Sans Pro-bold';
+        margin-bottom: 19px;
+    }
+    p{
+        font-size: 14px;
+        color: $white;
+        font-family: 'Source Sans Pro-reg';
+        text-align: center;
+    }
+}

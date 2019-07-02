@@ -1,0 +1,59 @@
+.integration{
+    padding: 150px 0 140px;
+    background-color: $sec-color;
+    position: relative;
+    border-top: 1px solid #d8d9db;
+    border-bottom: 1px solid #d8d9db;
+    &-title{
+        p{
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 21px;
+        }
+    }
+    &-items{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include lg-one(flex-wrap, wrap);
+        @include md{
+            flex-direction: column;
+            width: initial;   
+        }
+        &:not(:last-child){
+            margin-bottom: 15px;
+            @include lg-one(margin-bottom, 0);
+        }
+    }
+    .row{
+        @include md{
+            display: flex;
+            justify-content: space-between;
+        }
+        @include sm{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &-item{
+        background-color: $white;
+        width: 210px;
+        height: 100px;
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        filter: grayscale(1);
+        @include xl-one(width, 180px);
+        @include lg{
+            margin-bottom: 15px;
+            width: 210px;
+        }
+        &:hover{
+            filter: grayscale(0);
+            box-shadow: 0 3px 9px 1px rgba(31, 31, 31, 0.3);
+            background-color: $orange;
+        }
+    }
+}

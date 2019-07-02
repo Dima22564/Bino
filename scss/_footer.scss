@@ -1,0 +1,106 @@
+.footer{
+    position: relative;
+    @include bg('../img/bg-footer.jpg');
+    padding: 139px 0 148px;
+    // background-attachment: fixed;
+    &::before{
+        @include pseudo();
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+    }
+    &-top{
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 333;
+        width: 100%;
+        text-align: center;
+        h6{
+            font-size: 36px;
+            font-family: 'Open Sans-reg';
+            margin-bottom: 20px;
+            span{
+                font-family: 'Open Sans-bold';
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 30px;
+        }
+        a{
+            text-transform: uppercase;
+            padding: 22px 51px;
+            border: none;
+            background: $orange;
+            letter-spacing: 0.12px;
+            font-size: 14px;
+            font-family: 'Open Sans-bold';
+            margin-top: 69px;
+            color: $white;
+            border: 1px solid transparent;
+            transition: all 0.5s;
+            border-radius: 7px;
+            &:hover{
+                border-color: $orange;
+                background: transparent;
+            }
+        }
+    }
+    &-bottom{
+        background: $bg-sect;
+        padding: 37px 0;
+        .icons{
+            display: flex;
+            a{
+                color: $text;
+                transition: all 0.3s;
+                font-size: 22px;
+                &:not(:last-child){
+                    margin-right: 25px;
+                    @include sm-one(margin-right, 15px);
+                }
+                &:hover{
+                    color: $orange;
+                }
+            }
+        }
+        p{
+            font-size: 14px;
+            font-family: 'Source Sans Pro-reg';
+            color: $text;
+            @include sm-one(margin-top, 30px);
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            @include sm{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .toTop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 53px;
+        width: 53px;
+        border-radius: 50%;
+        background: $orange;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+        z-index: 333;
+        position: absolute;
+        right: 52px;
+        bottom: 0;
+        color: $white;
+        font-size: 38px;
+        transform: translateY(50%);
+    }
+}

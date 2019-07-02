@@ -1,0 +1,118 @@
+.pricing{
+    background: $white;
+    padding: 156px 0 143px;
+    color: $text;
+    @include lg-one(padding-bottom, 113px);
+    .col-xl-4{
+        margin: 0 auto;
+    }
+    .lines{
+        margin-bottom: 67px;
+    }
+    &-card{
+        cursor: pointer;
+        @include lg-one(margin-bottom, 30px);
+        &:hover{
+            .top{
+                background-color: $orange !important;
+            }
+            button{
+                @extend .top;
+            }
+            p{
+                color: $orange;
+            }
+        } 
+        
+        .top{
+            padding: 50px 87px;
+            background: $text;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.5s;
+            h5{
+                margin-bottom: 60px;
+                text-transform: uppercase;
+                font-size: 24px;
+                color: $white;
+                letter-spacing: 1.8px;
+                font-family: 'Source Sans Pro-bold';
+            }
+            .circle{
+                width: 154px;
+                height: 154px;
+                border-radius: 50%;
+                background: $white;
+                position: absolute;
+                bottom: 0;
+                transform: translateY(50.5%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 5;
+                &:before{
+                    @include pseudo();
+                    width: 172px;
+                    height: 86px;
+                    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+                    transform: translateY(-25px);
+                    background-color: rgba(255, 255, 255, 0.4);
+                    z-index: -1;
+                    top: 15px;
+                    left: -9px;
+                }
+                p{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 21.95px;
+                    font-family: 'Source Sans Pro-bold';
+                    font-size: 40px;
+                    transition: all 0.5s;
+                    span{
+                        font-size: 13px;
+                        margin-top: 13px;
+                        color: $text !important;
+                    }
+                }
+            }
+        }
+        .bottom{
+            background: $sec-color;
+            padding: 125px 70px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include xl-one(padding, 125px 40px 50px);
+            ul{
+                list-style: none;
+                font-size: 14px;
+                font-family: 'Source Sans Pro-reg';
+                text-align: center;
+                margin-bottom: 48px;
+                li{
+                    &:not(:last-child){
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            button{
+                text-transform: uppercase;
+                box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+                background-color: $text;
+                letter-spacing: 0.14px;
+                padding: 19px 31px;
+                color: $white;
+                font-size: 12px;
+                font-family: 'Source Sans Pro-reg';
+                border: none;
+                transition: all 0.5s;
+            }
+        }
+    }
+}

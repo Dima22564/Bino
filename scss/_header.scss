@@ -1,0 +1,214 @@
+.header{
+    @include bg('../img/header-bg.jpg');
+    padding: 40px 0 405px 0;
+    position: relative;
+    overflow: hidden;
+    @include lg-one(padding-bottom, 220px);
+
+    .lines{
+        margin-top: 45px;
+    }
+
+    &-menu{
+        overflow: hidden;
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include sm-one(justify-content, space-around);
+        }
+    }
+
+    &-burger-menu{
+        color: $white;
+        font-size: 40px;
+        display: none;
+        @include lg-one(display, block);
+
+        .fa-times{
+            display: none;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &-nav-items{
+        display: flex;
+        list-style: none;
+        transition: all 0.5s;
+        @include lg{
+            position: absolute;
+            right: 6%;
+            top: 12%;
+            flex-direction: column;
+            transform: translateX(200%);
+        }
+
+        &.menu-active{
+            transform: translateX(0);
+        }
+    }
+
+    &-nav-item{
+        &:not(:last-child){
+            margin-right: 60px;
+            @include xl-one(margin-right, 30px);
+            @include lg{
+                margin-right: 0;
+                margin-bottom: 15px;
+                z-index: 99999;
+            }
+        }
+    }
+
+    &-nav-link{
+        color: $white;
+        padding-bottom: 22px;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s;
+        text-transform: uppercase;
+
+        &.active{
+            border-bottom-color: $orange;
+            color: $orange;
+            font-weight: bold;
+            @include lg-one(border, none);
+        }
+    }
+
+    &-text-block{
+        text-align: center;
+        margin-top: 233px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include lg-one(margin-top, 334px);
+    }
+
+    &-subtitle{
+        margin: 0;
+        color: $white;
+        font-family: 'Source Sans Pro-reg';
+    }
+    
+    &-text{
+        max-width: 580px;
+        color: #cbc6c0;
+        font-size: 14px;
+        line-height: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        @include md-one(max-width, 100%);
+    }
+
+    &-btns{
+        font-family: 'Open Sans-bold';
+        text-transform: uppercase;
+        margin-top: 68px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        @include md{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .get-started{
+            padding: 22px 46px;
+            margin-right: 30px;
+
+            @include md{
+                flex-shrink: 0;
+                margin: 0 0 15px 0;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+
+        .learn-more{
+            @extend .get-started;
+            padding: 22px 69px;
+        }
+    }
+
+    &-slider{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .slick-initialized .slick-slide{
+        display: flex;
+    }
+
+    .slick-list{
+        padding-bottom: 50px;
+    }
+
+    .slick-arrow{
+        width: 45px;
+        height: 45px;
+        background-color: $orange;
+        border: none;
+        outline: none;
+        color: $white;
+        font-size: 46px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include md{
+            position: absolute;
+            bottom: -60px;
+        }
+    }
+
+    .slick-next{
+        margin-right: 50px;
+        @include md{
+            margin: 0;
+            right: 43%
+        }
+        @include sm-one(right, 29%);
+    }
+
+    .slick-prev{
+        margin-left: 50px;
+        @include md{
+            margin: 0;
+            left: 38%
+        }
+        @include sm-one(left, 30%);
+    }
+
+    .anchor{
+        position: absolute;
+        bottom: 0;
+        left: 48.4%;
+        display: flex;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #f4f5f9;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+
+        &:before{
+            @include pseudo();
+            width: 74px;
+            height: 74px;
+            // border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border-radius: 50%;
+            transform: translateY(-20px);
+            background-color: rgba(255, 255, 255, 0.4);
+            z-index: -10;
+            top: 15px;
+        }
+
+        @include sm-one(left, 43%);
+    }
+}

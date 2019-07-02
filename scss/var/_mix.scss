@@ -1,0 +1,76 @@
+@mixin bg($url) {
+    background-image: url($url);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+@mixin xl {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin media($size) {
+    @media (max-width: $size + 'px') {
+        @content;
+    }
+}
+
+@mixin xl-one($name, $value) {
+    @media (max-width: 1200px) {
+        #{$name}: $value;
+    }
+}
+
+@mixin lg-one($name, $value) {
+    @media (max-width: 992px) {
+        #{$name}: $value;
+    }
+}
+
+@mixin md-one($name, $value) {
+    @media (max-width: 768px) {
+        #{$name}: $value;
+    }
+}
+
+@mixin sm-one($name, $value) {
+    @media (max-width: 576px) {
+        #{$name}: $value;
+    }
+}
+
+@mixin one-media($name, $value, $size) {
+    @media (max-width: $size + 'px') {
+        #{$name}: $value;
+    }
+}
+
+@mixin pseudo($content: '', $display: block, $position: absolute) {
+    content: $content;
+    display: $display;
+    position: $position;
+}
+

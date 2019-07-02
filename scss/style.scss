@@ -1,0 +1,139 @@
+@import './var/_var';
+@import './var/_fonts';
+@import './var/_mix';
+
+// Blocks
+@import './_header';
+@import './_about';
+@import './_portfolio';
+@import './_pricing';
+@import './_team';
+@import './_integration';
+@import './_blog';
+@import './_contact';
+@import './_footer';
+
+body {
+    font-family: 'Source Sans Pro-reg';
+    position: relative;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Open Sans-bold';
+    font-size: 72px;
+    color: $white;
+    @include lg-one(font-size, 55px);
+}
+
+h2 {
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro-bold';
+    font-size: 36px;
+    color: $mini-titles;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include sm-one(letter-spacing, 1.6px);
+
+    &+p {
+        text-align: center;
+        font-size: 14px;
+        color: $text;
+        font-family: 'Open Sans-reg';
+        @include sm-one(line-height, 30px);
+    }
+}
+
+button,
+a {
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+.lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0 45px 0;
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $orange;
+        margin: 0 13px;
+    }
+    hr {
+        width: 80px;
+        height: 2px;
+        border: 1px solid $text;
+        margin: 0;
+        background: $text;
+    }
+}
+
+
+// Menu
+.menu-fixed {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 18px 0;
+    z-index: 999999999999;
+}
+
+
+// Buttons
+.orange {
+    background-color: $orange;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+    color: $white;
+    padding-bottom: 22px;
+    padding-top: 22px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $white;
+    }
+}
+
+.transp {
+    @extend .orange;
+    border: 1px solid $white;
+    background-color: transparent;
+
+    &:hover {
+        background-color: $orange;
+        border: 1px solid transparent;
+    }
+}
+
+// Scrollbar
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: $orange;
+}
+
+::-webkit-scrollbar-track{
+    background: #cecece;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+    border-radius: 10px;
+}
