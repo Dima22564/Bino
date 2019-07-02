@@ -60,6 +60,7 @@
             width: 100%;
             font-family: 'Source Sans Pro-reg';
             @include lg-one(margin-bottom, 30px);
+            outline: none;
         }
         textarea{
             @extend input;
