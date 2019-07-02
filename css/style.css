@@ -1547,6 +1547,7 @@ svg .img {
   background: #fff;
   width: 100%;
   font-family: 'Source Sans Pro-reg';
+  outline: none;
 }
 
 .contact-form textarea {
